@@ -20,8 +20,8 @@ cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
     cv2.imshow('Frame', sketch(frame))
-    if cv2.waitkey == ord('q') or cv2.waitkey == ord('Q'):
+    #if q key is pressed loop will break, uses ascii table
+    if cv2.waitKey(1) == 113:
         break
-#once loop breaks the windows will be destroyed
 cap.release()
 cv2.destroyAllWindows()
